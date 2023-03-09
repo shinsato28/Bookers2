@@ -1,2 +1,29 @@
-<h1>Home#top</h1>
-<p>Find me in app/views/homes/top.html.erb</p>
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="mx-auto col-6">
+        <h1 class="pt-5">
+          welcome to
+          <strong class="fa-solid fa-book">Bookers</strong>
+          !!
+        </h1>
+
+        <p>
+          In
+          <strong class="fa-solid fa-book">Bookers</strong>
+          ,
+        </p>
+        <p>you can share and exchange  your opinions , inpressions , and emotions</p>
+        <p> about various books!</p>
+        <div class="btn-wrapper col-11 mx-auto">
+          <div class="row bg-primary mb-3">
+            <%= link_to "Log in", new_user_session_path, class: "stretched-link text-light" %>
+          </div>
+          <div class="row bg-success">
+            <%= link_to "Sigh up", new_user_registration_path, class: "stretched-link text-light" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

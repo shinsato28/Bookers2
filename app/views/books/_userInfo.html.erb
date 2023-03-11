@@ -1,0 +1,47 @@
+<main>
+  <div class="container mt-3 px-5">
+    <div class="row">
+      <div class="col-md-3 px-sm-0">
+        <h2>User info</h2>
+        <p><%= image_tag user.get_profile_image(100,100) %></p>
+
+        <table class="table">
+          <tbody>
+            <tr>
+              <th>name</th>
+              <th><%= user.name %></th>
+            </tr>
+            <tr>
+              <th>introduction</th>
+              <th><%= user.introduction %></th>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="row text-center mb-2">
+          <div class="col-12 border border-dark rounded mx-auto">
+            <i class="fa-solid fa-user-pen"></i>
+            <%= link_to "", edit_user_path(user.id), class: "stretched-link" %>
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <h2>New book</h2>
+              <%= form_with model: @book do |f| %>
+                <span class="d-block">Title</span>
+                <%= f.text_field :title, class:"d-block" %>
+                <span class="d-block mt-2">Opinion</spanh5>
+                <%= f.text_area :body, class:"d-block" %>
+                <%= f.submit 'Create Book', class:"bg-success mt-3" %>
+              <% end %>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-8 offset-md-1 bg-success">
+        test
+      </div>
+    </div>
+  </div>
+</main>

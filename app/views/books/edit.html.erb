@@ -1,1 +1,20 @@
-<h1>editPage</h1>
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="col-6 px-5 mx-auto">
+        <h1 class="my-3">Editing Book</h1>
+          <%= form_with model: @book do |f| %>
+            <span class="d-block">Title</span>
+            <%= f.text_field :title, class:"d-block form-control" %>
+            <span class="d-block mt-2">Opinion</spanh5>
+            <%= f.text_area :body, class:"d-block form-control" %>
+            <%= f.submit "Update Book", class:"btn btn-success d-block my-3" %>
+
+            <%= link_to "Show", book_path(@book.id), class: "link-button" %>
+            <span>|</span>
+            <%= link_to "Back", books_path, class: "link-button"  %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</main>

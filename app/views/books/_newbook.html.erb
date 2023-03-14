@@ -1,0 +1,8 @@
+<h2>New book</h2>
+<%= form_with model: book do |f| %>
+  <span class="d-block">Title</span>
+  <%= f.text_field :title, class:"d-block" %>
+  <span class="d-block mt-2">Opinion</spanh5>
+  <%= f.text_area :body, class:"d-block" %>
+  <%= f.submit 'Create Book', class:"btn btn-success mt-3" %>
+<% end %>
